@@ -112,7 +112,7 @@ def get_posts():
     return dumps(posts)
 
 #? get post by user
-@app.route('/api/users/<user>' , methods=['GET'])
+@app.route('/api/posts/<user>' , methods=['GET'])
 def get_posts_by_user(user):
     posts = mongo.db.post.find({'userId' : ObjectId(user)})
     return dumps(posts)
